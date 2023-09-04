@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .form-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <button onclick="toggleForm('login')">Login</button>
+        <button onclick="toggleForm('signup')">Signup</button>
+        <div id="loginForm" class="form-container">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="signupForm" class="form-container">
+            <h2>Signup</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            if (formType === 'login') {
+                document.getElementById('loginForm').style.display = 'block';
+                document.getElementById('signupForm').style.display = 'none';
+            } else if (formType === 'signup') {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('signupForm').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
